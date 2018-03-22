@@ -1,0 +1,3 @@
+/home/deba/Code/limbo/exp/blackdrops/res/Simpleyoubot/build/CMakeFiles/edit_cache.dir
+/home/deba/Code/limbo/exp/blackdrops/res/Simpleyoubot/build/CMakeFiles/rebuild_cache.dir
+/home/deba/Code/limbo/exp/blackdrops/res/Simpleyoubot/build/CMakeFiles/simpleyoubotdart.dir

@@ -1,0 +1,88 @@
+<?xml version='1.0'?>
+<robot name="dd_robot">
+  
+  <!-- Base Link -->
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+          <box size="0.5 0.5 0.25"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <!-- Right Wheel -->
+  <link name="right_wheel">
+    <visual>
+      <origin xyz="0 0 0" rpy="1.570795 0 0" />
+      <geometry>
+          <cylinder length="0.1" radius="0.2" />
+      </geometry>
+    </visual>
+  </link>
+  <joint name="joint_right_wheel" type="continuous">
+    <parent link="base_link"/>
+    <child link="right_wheel"/>
+    <origin xyz="0 -0.30 0" rpy="0 0 0" /> 
+    <axis xyz="0 1 0" />
+  </joint>
+
+  <!-- Left Wheel -->
+  <link name="left_wheel">
+    <visual>
+      <origin xyz="0 0 0" rpy="1.570795 0 0" />
+      <geometry>
+          <cylinder length="0.1" radius="0.2" />
+      </geometry>
+    </visual>
+  </link>
+  <joint name="joint_left_wheel" type="continuous">
+    <parent link="base_link"/>
+    <child link="left_wheel"/>
+    <origin xyz="0 0.30 0" rpy="0 0 0" /> 
+    <axis xyz="0 1 0" />
+  </joint>
+
+  <!-- First Link -->
+  <link name="first_link">
+    <visual>
+      <origin xyz="0 0 0.125" rpy="0 0 0"/> 
+      <geometry>
+	<box size="0.1 0.1 1"/><!-- height=1, base is a square -->
+      </geometry>
+    </visual>
+  </link>
+  
+ <!-- Joint between first Link and base Link -->
+  <joint name="joint_fir_base" type="revolute">
+    <parent link="base_link"/>
+    <child link="first_link"/>
+    <origin xyz="0 0.1 0.125" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <dynamics damping="0.7"/>
+    <limit effort="100.0" velocity="0.5" lower="-3.14" upper="3.14" />
+  </joint>
+ 
+  <!-- Middle Link -->
+  <link name="mid_link">
+    <visual>
+      <origin xyz="0 0 0.825" rpy="0 0 0"/>
+      <geometry>
+	<box size="0.1 0.1 2"/>
+      </geometry>
+    </visual>  
+  </link>
+<!-- Joint between First Link and Middle Link -->
+  <joint name="joint_fir_mid" type="revolute">
+    <parent link="first_link"/>
+    <child link="mid_link"/>
+    <origin xyz="0 0.1 0.825" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <dynamics damping="0.7"/>
+    <limit effort="100.0" velocity="0.5" lower="-3.14" upper="3.14" />
+  </joint>
+    
+</robot>
+
+
+
