@@ -418,53 +418,53 @@
   </link>
 
 
-<!--  <joint name="arm_5_end" type="fixed">-->
-<!--    <parent link="arm_5"/>-->
-<!--    <child link="arm_link"/>-->
-<!--    <origin xyz="0 0.039 -0.006"/>-->
-<!--  </joint>-->
+  <joint name="arm_5_end" type="fixed">
+    <parent link="arm_5"/>
+    <child link="arm_link"/>
+    <origin xyz="0 0.039 -0.006"/>
+  </joint>
 
 
-<!--  <link name="arm_link">-->
+  <link name="arm_link">
 
-    <!-- For Box Visual Collision Intertial -->
-<!--    <visual>-->
-<!--      <origin rpy="0 0 0" xyz="0 0.065 0"/>-->
-<!--      <geometry name="end_effector">-->
-<!--        <box size="0.02 0.13 0.025"/>-->
-<!--      </geometry>-->
-<!--      <material name="omni/Red"/>-->
-<!--    </visual>-->
-<!--    <collision>-->
-<!--      <origin rpy="0 0 0" xyz="0 0.065 0"/>-->
-<!--      <geometry>-->
-<!--        <box size="0.02 0.13 0.025"/>-->
-<!--      </geometry>-->
-<!--    </collision>-->
-<!--    <inertial>-->
-      <!-- center of mass -->-->
-<!--      <origin rpy="0 0 0" xyz="0 0.065 0"/>-->
-<!--      <mass value="0.06"/>-->
-      <!-- box inertia: 1/12*m(y^2+z^2), ... -->-->
-<!--      <inertia ixx="8.7625e-05" ixy="0" ixz="0" iyy="5.125e-06" iyz="0" izz="8.65e-05"/>-->
-<!--    </inertial>-->
-    <!-- left hook interface -->-->
-<!--    <visual>-->
-<!--      <origin rpy="0 1.57079632679 0" xyz="-0.021 0 0.035"/>-->
-<!--      <geometry>-->
-<!--        <mesh filename="../arm_meshes/HookInterface.STL" scale="0.001 0.001 0.001"/>-->
-<!--      </geometry>-->
-<!--      <material name="omni/Red"/>-->
-<!--    </visual>-->
-    <!-- right hook interface -->-->
-<!--    <visual>-->
-<!--      <origin rpy="0 -1.57079632679 0" xyz="0.021 0 -0.035"/>-->
-<!--      <geometry>-->
-<!--        <mesh filename="../arm_meshes/HookInterface.STL" scale="0.001 0.001 0.001"/>-->
-<!--      </geometry>-->
-<!--      <material name="omni/Red"/>-->
-<!--    </visual>-->
-<!--  </link>-->
+     For Box Visual Collision Intertial 
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0.065 0"/>
+      <geometry name="end_effector">
+        <box size="0.02 0.13 0.025"/>
+      </geometry>
+      <material name="omni/Red"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0.065 0"/>
+      <geometry>
+        <box size="0.02 0.13 0.025"/>
+      </geometry>
+    </collision>
+    <inertial>
+<!--       center of mass -->
+      <origin rpy="0 0 0" xyz="0 0.065 0"/>
+      <mass value="0.06"/>
+<!--       box inertia: 1/12*m(y^2+z^2), ... -->-->
+      <inertia ixx="8.7625e-05" ixy="0" ixz="0" iyy="5.125e-06" iyz="0" izz="8.65e-05"/>
+    </inertial>
+<!--     left hook interface -->
+    <visual>
+      <origin rpy="0 1.57079632679 0" xyz="-0.021 0 0.035"/>
+      <geometry>
+        <mesh filename="../arm_meshes/HookInterface.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="omni/Red"/>
+    </visual>
+<!--     right hook interface -->
+    <visual>
+      <origin rpy="0 -1.57079632679 0" xyz="0.021 0 -0.035"/>
+      <geometry>
+        <mesh filename="../arm_meshes/HookInterface.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="omni/Red"/>
+    </visual>
+  </link>
 
 
 <!--  <joint name="arm_hook" type="fixed">-->
